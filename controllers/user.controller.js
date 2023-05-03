@@ -3,6 +3,7 @@ const User = require('../models/user.model');
 const catchAsync = require('../utils/catchAsync');
 const { storage } = require('../utils/firebase');
 const Post = require('../models/post.model');
+const Comment = require('../models/comment.model');
 
 exports.findAll = catchAsync(async (req, res) => {
   const users = await User.findAll({
