@@ -2,6 +2,7 @@ const { ref, getDownloadURL } = require('firebase/storage');
 const User = require('../models/user.model');
 const catchAsync = require('../utils/catchAsync');
 const { storage } = require('../utils/firebase');
+const Post = require('../models/post.model');
 
 exports.findAll = catchAsync(async (req, res) => {
   const users = await User.findAll({
